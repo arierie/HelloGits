@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "42284967804",
+    "firebase_url": "https://stroomhead-72a91.firebaseio.com",
+    "project_id": "stroomhead-72a91",
+    "storage_bucket": "stroomhead-72a91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42284967804:android:f27826bc22318385",
+        "android_client_info": {
+          "package_name": "com.stroomhead.gits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42284967804-140pldp1mo2m4fh4jc493qj77q6gl7vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb-3OhbKORHYhBiqZ4WVPMgIO1ZY_QLnc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
