@@ -1,6 +1,7 @@
 package id.arieridwan;
 
-import id.arieridwan.dao.HeadlineDao;
+
+import id.arieridwan.dao.ArticleListDao;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -11,7 +12,7 @@ import rx.Observable;
 
 public interface ApiInterface {
     @GET("articles")
-    Observable<HeadlineDao> getHeadline(
+    Observable<ArticleListDao> getArticle(
             @Query("source") String source,
             @Query("sortBy") String sortBy,
             @Query("apiKey") String apiKey

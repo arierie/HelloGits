@@ -4,40 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="android.view.View" />
+
         <variable
             name="vm"
-            type="id.arieridwan.hellogits.article.MainActivityRowVM" />
+            type="id.arieridwan.hellogits.mvvm.main.MainActivityRowVM" />
     </data>
+
+    <LinearLayout
+        android:id="@+id/Rowlayout"
+        android:paddingTop="@{vm.isFirstData ? 16 : 4}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{vm.isLastData ? View.GONE : View.VISIBLE}">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@{vm.bTextNumber}"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    tools:text="8" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="@{Rowlayout.height}"
+                android:layout_weight="1"
+                android:background="@color/colorText" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{vm.isLastData ? View.VISIBLE : View.GONE}">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@{vm.bTextNumber}"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    tools:text="8" />
+            </RelativeLayout>
+        </LinearLayout>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:padding="16dp">
+
+                <TextView
+                    fontPath="fonts/lato_bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:maxLines="3"
+                    android:minLines="2"
+                    android:singleLine="false"
+                    android:text="@{vm.bTextJudul}"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="@string/dummy_judul" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:singleLine="false"
+                    android:text="@{vm.bTextDesk}"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    tools:text="@string/dummy_desk" />
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@mipmap/ic_launcher"
-                    app:imgUrl="@{vm.bImageHeadline}"
-                    android:id="@+id/imageView" />
-
-                <TextView
-                    tools:text="TextView"
-                    android:text="@{vm.bTextJudul}"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView6"
-                    android:textColor="@color/cardview_dark_background"
-                    android:textSize="16sp"
-                    android:layout_marginTop="16dp" />
-
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/sample_images"
+                    app:imgUrl="@{vm.bImage}"
+                    tools:src="@mipmap/ic_launcher" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
+    </LinearLayout>
 </layout>

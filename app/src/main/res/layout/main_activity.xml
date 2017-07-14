@@ -2,18 +2,25 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
         <import type="android.view.View" />
         <variable
             name="vm"
-            type="id.arieridwan.hellogits.mvvm.article.MainActivityVM" />
+            type="id.arieridwan.hellogits.mvvm.main.MainActivityVM" />
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/bRecyclerView"
+            android:id="@+id/rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:adapter="@{vm.bAdapter}"
+            app:layoutManager="@{vm.bLayoutManager}" />
+
     </LinearLayout>
 </layout>

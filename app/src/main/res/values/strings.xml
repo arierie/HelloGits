@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Hello Gits</string>
+    <string name="dummy_judul">Ini Adalah Contoh Judul Artikel Berukuran Besar</string>
+    <string name="dummy_desk">Ini adalah contoh deskripsi singkat dari berita, ini akan ditulis sedikit lebih banyak dari judul namun dengan ukuran text yang leih kecil.</string>
 </resources>

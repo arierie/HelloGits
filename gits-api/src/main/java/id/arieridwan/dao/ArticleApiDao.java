@@ -4,7 +4,7 @@ package id.arieridwan.dao;
  * Created by ASUS on 06/10/2016.
  */
 
-public class HeadlineDao extends BaseApiDao
+public class ArticleApiDao extends BaseApiDao
 {
     private String author;
     private String title;
@@ -12,6 +12,15 @@ public class HeadlineDao extends BaseApiDao
     private String url;
     private String urlToImage;
     private String publishedAt;
+
+    public ArticleApiDao(String author, String title, String description, String url, String urlToImage, String publishedAt) {
+        this.author = author;
+        this.title = title;
+        this.description = description;
+        this.url = url;
+        this.urlToImage = urlToImage;
+        this.publishedAt = publishedAt;
+    }
 
     public String getAuthor() {
         return author;
