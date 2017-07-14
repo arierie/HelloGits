@@ -21,8 +21,6 @@ public class MainActivityRowVM extends GitsRowVM<ArticleApiDao,MainActivityRowBi
     public ObservableField<String> bTextJudul = new ObservableField<>();
     public ObservableField<String> bTextDesk = new ObservableField<>();
     public ObservableField<String> bImage = new ObservableField<>();
-    public ObservableField<Boolean> isFirstData = new ObservableField<>(false);
-    public ObservableField<Boolean> isLastData = new ObservableField<>(false);
 
     public MainActivityRowVM(Context context, MainActivityRowBinding binding, ArticleApiDao data, int pos) {
         super(context, binding, data);
@@ -31,12 +29,6 @@ public class MainActivityRowVM extends GitsRowVM<ArticleApiDao,MainActivityRowBi
         bTextJudul.set(data.getTitle());
         bTextDesk.set(data.getDescription());
         bImage.set(data.getUrlToImage());
-        if(number == 1){
-            isFirstData.set(true);
-        }
-        if (number == 10){
-            isLastData.set(true);
-        }
     }
 
     @BindingAdapter("imgUrl")

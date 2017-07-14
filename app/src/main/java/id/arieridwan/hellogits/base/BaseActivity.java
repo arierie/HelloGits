@@ -26,8 +26,8 @@ public abstract class BaseActivity <VM extends GitsVM, B extends ViewDataBinding
                 .build()
         );
 
-        if (getSupportActionBar() != null)
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        if (getSupportActionBar() != null)
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
